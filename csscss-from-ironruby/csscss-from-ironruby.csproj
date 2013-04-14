@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F4B037E-F51A-456F-A3B2-D53D02C4BEF9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ironrubyinconsoleapp</RootNamespace>
+    <AssemblyName>ironrubyinconsoleapp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IronRuby">
+      <HintPath>..\packages\IronRuby.1.1.3\lib\IronRuby.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby.Libraries">
+      <HintPath>..\packages\IronRuby.1.1.3\lib\IronRuby.Libraries.dll</HintPath>
+    </Reference>
+    <Reference Include="IronRuby.Libraries.Yaml">
+      <HintPath>..\packages\IronRuby.1.1.3\lib\IronRuby.Libraries.Yaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic">
+      <HintPath>..\packages\IronRuby.1.1.3\lib\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting">
+      <HintPath>..\packages\IronRuby.1.1.3\lib\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata">
+      <HintPath>..\packages\IronRuby.1.1.3\lib\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="call_csscss.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="hello.rb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\blankslate.rb" />
+    <None Include="lib\colorize.rb" />
+    <None Include="lib\csscss.rb" />
+    <None Include="lib\csscsshelper.rb" />
+    <None Include="lib\csscss\cli.rb" />
+    <None Include="lib\csscss\json_reporter.rb" />
+    <None Include="lib\csscss\parser\background.rb" />
+    <None Include="lib\csscss\parser\base.rb" />
+    <None Include="lib\csscss\parser\border.rb" />
+    <None Include="lib\csscss\parser\border_color.rb" />
+    <None Include="lib\csscss\parser\border_side.rb" />
+    <None Include="lib\csscss\parser\border_style.rb" />
+    <None Include="lib\csscss\parser\border_width.rb" />
+    <None Include="lib\csscss\parser\color.rb" />
+    <None Include="lib\csscss\parser\common.rb" />
+    <None Include="lib\csscss\parser\css.rb" />
+    <None Include="lib\csscss\parser\font.rb" />
+    <None Include="lib\csscss\parser\list_style.rb" />
+    <None Include="lib\csscss\parser\margin.rb" />
+    <None Include="lib\csscss\parser\multi_side_transformer.rb" />
+    <None Include="lib\csscss\parser\outline.rb" />
+    <None Include="lib\csscss\parser\padding.rb" />
+    <None Include="lib\csscss\parslet_optimizations.rb" />
+    <None Include="lib\csscss\redundancy_analyzer.rb" />
+    <None Include="lib\csscss\reporter.rb" />
+    <None Include="lib\csscss\types.rb" />
+    <None Include="lib\csscss\version.rb" />
+    <None Include="lib\date.rb" />
+    <None Include="lib\json\json.rb" />
+    <None Include="lib\json\json\add\core.rb" />
+    <None Include="lib\json\json\add\rails.rb" />
+    <None Include="lib\json\json\Array.xpm" />
+    <None Include="lib\json\json\common.rb" />
+    <None Include="lib\json\json\editor.rb" />
+    <None Include="lib\json\json\ext.rb" />
+    <None Include="lib\json\json\FalseClass.xpm" />
+    <None Include="lib\json\json\Hash.xpm" />
+    <None Include="lib\json\json\json.xpm" />
+    <None Include="lib\json\json\Key.xpm" />
+    <None Include="lib\json\json\NilClass.xpm" />
+    <None Include="lib\json\json\Numeric.xpm" />
+    <None Include="lib\json\json\pure.rb" />
+    <None Include="lib\json\json\pure\generator.rb" />
+    <None Include="lib\json\json\pure\parser.rb" />
+    <None Include="lib\json\json\String.xpm" />
+    <None Include="lib\json\json\TrueClass.xpm" />
+    <None Include="lib\json\json\version.rb" />
+    <None Include="lib\parslet\parslet.rb" />
+    <None Include="lib\parslet\parslet\atoms.rb" />
+    <None Include="lib\parslet\parslet\atoms\alternative.rb" />
+    <None Include="lib\parslet\parslet\atoms\base.rb" />
+    <None Include="lib\parslet\parslet\atoms\can_flatten.rb" />
+    <None Include="lib\parslet\parslet\atoms\capture.rb" />
+    <None Include="lib\parslet\parslet\atoms\context.rb" />
+    <None Include="lib\parslet\parslet\atoms\dsl.rb" />
+    <None Include="lib\parslet\parslet\atoms\dynamic.rb" />
+    <None Include="lib\parslet\parslet\atoms\entity.rb" />
+    <None Include="lib\parslet\parslet\atoms\lookahead.rb" />
+    <None Include="lib\parslet\parslet\atoms\named.rb" />
+    <None Include="lib\parslet\parslet\atoms\re.rb" />
+    <None Include="lib\parslet\parslet\atoms\repetition.rb" />
+    <None Include="lib\parslet\parslet\atoms\scope.rb" />
+    <None Include="lib\parslet\parslet\atoms\sequence.rb" />
+    <None Include="lib\parslet\parslet\atoms\str.rb" />
+    <None Include="lib\parslet\parslet\atoms\visitor.rb" />
+    <None Include="lib\parslet\parslet\cause.rb" />
+    <None Include="lib\parslet\parslet\convenience.rb" />
+    <None Include="lib\parslet\parslet\error_reporter.rb" />
+    <None Include="lib\parslet\parslet\error_reporter\deepest.rb" />
+    <None Include="lib\parslet\parslet\error_reporter\tree.rb" />
+    <None Include="lib\parslet\parslet\export.rb" />
+    <None Include="lib\parslet\parslet\expression.rb" />
+    <None Include="lib\parslet\parslet\expression\treetop.rb" />
+    <None Include="lib\parslet\parslet\parser.rb" />
+    <None Include="lib\parslet\parslet\pattern.rb" />
+    <None Include="lib\parslet\parslet\pattern\binding.rb" />
+    <None Include="lib\parslet\parslet\rig\rspec.rb" />
+    <None Include="lib\parslet\parslet\scope.rb" />
+    <None Include="lib\parslet\parslet\slice.rb" />
+    <None Include="lib\parslet\parslet\source.rb" />
+    <None Include="lib\parslet\parslet\source\line_cache.rb" />
+    <None Include="lib\parslet\parslet\transform.rb" />
+    <None Include="lib\parslet\parslet\transform\context.rb" />
+    <None Include="lib\stringio.rb" />
+    <None Include="lib\strscan.rb" />
+    <None Include="packages.config" />
+    <None Include="stringio.rb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sample.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\json\json\ext\1.8\" />
+    <Folder Include="lib\json\json\ext\1.9\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <!-- <ItemGroup>
+    <CssCss Include="$(ProjectDir)\lib\**\*.*"/>
+  </ItemGroup>-->
+  <Target Name="AfterBuild">
+    <Exec Command="xcopy.exe  &quot;$(ProjectDir)\lib&quot; &quot;$(ProjectDir)\$(OutDir)\lib&quot; /e /I /D /Y" />
+  </Target>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

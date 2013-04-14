@@ -1,0 +1,4 @@
+ h1, h2 { display: none; position: relative; outline:none}
+.foo { display: none; width: 1px }
+.bar { position: relative; width: 1px; outline: none }
+.baz { display: none }
