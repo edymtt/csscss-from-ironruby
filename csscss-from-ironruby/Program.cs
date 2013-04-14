@@ -27,6 +27,8 @@ namespace ironrubyinconsoleapp
         {
             var startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.RedirectStandardOutput=true;
+            //csscss under windows is a batch file. In order for it to correctly
+            //find the Ruby files we should call a batch that calls the csscss batch
             startInfo.FileName="call_csscss.bat";
             startInfo.Arguments="  -n 1 -v sample.css";
             startInfo.UseShellExecute = false;
