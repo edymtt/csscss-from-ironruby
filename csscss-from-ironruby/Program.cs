@@ -50,7 +50,7 @@ namespace ironrubyinconsoleapp
             //http://stackoverflow.com/questions/1478011/embedding-ironruby-in-c-sharp-and-datetime
             var searchPaths = cmd.GetSearchPaths().Concat(new[] 
 {
-    "C:\\Users\\edymtt\\ruby-1.9.3-p392\\lib",
+    "C:\\Users\\ermiotto\\ruby-1.9.3-p448\\lib",
     "lib\\json",
     "lib\\parslet",
     "lib"
