@@ -157,6 +157,15 @@
     <None Include="lib\parslet\parslet\transform\context.rb" />
     <None Include="lib\stringio.rb" />
     <None Include="lib\strscan.rb" />
+    <None Include="minlib\date.rb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="minlib\stringio.rb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="minlib\strscan.rb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="stringio.rb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -184,6 +193,7 @@
   </ItemGroup>-->
   <Target Name="AfterBuild">
     <Exec Command="xcopy.exe  &quot;$(ProjectDir)\lib&quot; &quot;$(ProjectDir)\$(OutDir)\lib&quot; /e /I /D /Y" />
+    <Exec Command="xcopy.exe  &quot;$(ProjectDir)\local&quot; &quot;$(ProjectDir)\$(OutDir)\local&quot; /e /I /D /Y" />
   </Target>
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
 </Project>

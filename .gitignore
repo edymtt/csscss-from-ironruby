@@ -1,3 +1,5 @@
 packages/
 bin/
 obj/
+csscss-from-ironruby/local
+csscss-from-ironruby/.bundle
